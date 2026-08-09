@@ -2,11 +2,6 @@
 
 **ITAI 1378 — Computer Vision Capstone Project (Tier 3)**
 
-**Team Members**
-- Eva Abou Harb
-- Mary Ann Mastri
-- Zain Ahmed
-
 ---
 
 ## 1. Overview
@@ -156,19 +151,32 @@ exactly why the smoke test was run at low epochs/resolution first — to confirm
 the pipeline plumbing works before spending GPU hours on a real run. The 50-epoch/
 640px run is expected to substantially improve recall on the violation classes.
 
+It should be noted that Colab was especially unstable during the finals period.
+Over 100 attempts were made before one test completed. Several different data bases
+were tried and one was removed and disappeared from Kaggle entirely. Many attempts 
+to mitigate the failure involved reducing epochs, image size, multiple data sets, 
+and different GPU servers. Due to the extremely short time frame provided by the instructor
+to complete an unscheduled Capstone project announced on July 30, 2026 to the submission
+on August 9, 2026, the results obtained from one smoke test became the project.  
+Additional time was purchased and multiple AI assistants were consulted to creatively
+adjust any item in the notebook to get a successful run.  The entire notebook was not
+able to be successfully run as the Collaborator agent 
+
 ## 7. Example Outputs
 
 ### Success case
+<img width="487" height="511" alt="image" src="https://github.com/user-attachments/assets/c4d7964f-a3dc-47f3-acd8-e1cdd52157bf" />
+The AI agent got everything correct - gloves, boots, vest, goggles, helmet
 
-*(Add an annotated image here from `outputs/sample_annotated_images/` showing a
-correctly detected, clearly compliant or clearly non-compliant scene, plus a
-one-line description of what the agent got right.)*
+
 
 ### Failure case
+<img width="807" height="560" alt="AdobeExpressPhotos_3e7caf8c96d646f39318e048d7f7cf27_CopyEdited" src="https://github.com/user-attachments/assets/6541a8eb-b331-4a5c-88c4-aef7e14f5528" />
+
+Lights were incorrectly identified as helmets.
 
 <p align="center">
-  <img src="docs/images/failure_case_false_positive.png" width="500">
-</p>
+
 
 The detector produced a **false positive**: a `helmet 0.50` box over a stage
 light with no person underneath it, plus a low-confidence `none 0.32` box that
