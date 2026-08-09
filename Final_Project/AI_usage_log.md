@@ -52,7 +52,7 @@ project's history and results.
   the evaluation metrics reported by Ultralytics' own `.val()` call, which were
   used as-is rather than recomputed.
 - Colab instability (frequent disconnects and session limits) meant the free
-  daily compute allotment (~5h40m) was exhausted repeatedly; I purchased
+  daily compute allotment was exhausted repeatedly; I purchased
   100 Colab compute units (~$10) and used roughly 24 of them getting a clean
   end-to-end smoke-test run (10 epochs, 320px) before committing to the longer
   50-epoch, 640px training run used for the final reported results. The successfully
