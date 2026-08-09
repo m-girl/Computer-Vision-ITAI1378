@@ -44,7 +44,7 @@ project's history and results.
 
 ## What we'd flag for the reader
 
-- Given how much of this notebook was written with AI assistance, the team
+- Given how much of this notebook was written with AI assistance, I
   focused verification effort on the parts most likely to silently produce
   wrong results: the box-coordinate math in `decode_yolo_onnx` (letterboxing,
   scale/offset correction back to original image coordinates), the compliance
@@ -52,10 +52,12 @@ project's history and results.
   the evaluation metrics reported by Ultralytics' own `.val()` call, which were
   used as-is rather than recomputed.
 - Colab instability (frequent disconnects and session limits) meant the free
-  daily compute allotment (~5h40m) was exhausted repeatedly; the team purchased
+  daily compute allotment (~5h40m) was exhausted repeatedly; I purchased
   100 Colab compute units (~$10) and used roughly 24 of them getting a clean
   end-to-end smoke-test run (10 epochs, 320px) before committing to the longer
-  50-epoch, 640px training run used for the final reported results.
+  50-epoch, 640px training run used for the final reported results. The successfully
+  run smoke test took about 15 minutes of time to complete. Over 100 attempts
+  to run the notebook ended unsuccessfully and only one run was successful.
 - The smoke test's own metrics and failure case (see README Sections 6–7) are
   reported honestly rather than omitted, even though they're weaker than the
   final run — they were a real, useful checkpoint that validated the pipeline
