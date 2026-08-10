@@ -1,0 +1,4 @@
+mAP50: 0.5236
+mAP50-95: 0.2532
+Mean Precision: 0.7095
+Mean Recall: 0.5037
